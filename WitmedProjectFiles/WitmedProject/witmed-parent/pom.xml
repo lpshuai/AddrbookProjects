@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.ekgc.witmed</groupId>
+	<artifactId>witmed-parent</artifactId>
+	<version>1.0.0</version>
+
+	<!-- 配置 Spring Boot Starter Parent 父级依赖 [begin] -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.9.RELEASE</version>
+	</parent>
+	<!-- 配置 Spring Boot Starter Parent 父级依赖 [end] -->
+
+	<dependencies>
+		<!-- 配置 Spring Boot Starter Web 依赖 [begin] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 配置 Spring Boot Starter Web 依赖 [end] -->
+
+		<!-- 配置 Spring Boot Devtools 依赖 [begin] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<!-- 配置 Spring Boot Devtools 依赖 [end] -->
+
+	</dependencies>
+
+	<dependencyManagement>
+		<!-- 配置 Spring Cloud dependencies 依赖 [begin] -->
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Hoxton.SR11</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+		<!-- 配置 Spring Cloud dependencies 依赖 [end] -->
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- 配置 Spring Boot Maven Plugin 依赖[begin] -->
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- 配置 Spring Boot Maven Plugin 依赖[end] -->
+
+			</plugins>
+
+		</pluginManagement>
+	</build>
+
+
+</project>
