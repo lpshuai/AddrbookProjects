@@ -16,6 +16,12 @@ public class PageVO<E> implements Serializable {
 	private Long totalCount;                    // 总条数
 	private Integer totalPage;                  // 总页数
 
+	public PageVO() {}
+	public PageVO(Integer pageNum, Integer pageSize) {
+		this.pageNum = pageNum;
+		this.pageSize = pageSize;
+	}
+
 	public Integer getPageNum() {
 		return pageNum;
 	}
